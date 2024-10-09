@@ -1267,7 +1267,7 @@ void idPhysics_Player::CheckGround(bool checkStuck)
 		{
 			// don't allow another jump for a little while
 			current.movementFlags |= PMF_TIME_LAND;
-			current.movementTime = 250;
+			current.movementTime = 25; //250
 		}
 	}
 
@@ -1464,11 +1464,13 @@ bool idPhysics_Player::CheckJump(void)
 		return false;
 	}
 
+	//e p i x - turn off this wait condition
+	// 
 	// must wait for jump to be released
-	if (current.movementFlags & PMF_JUMP_HELD)
-	{
-		return false;
-	}
+	//if (current.movementFlags & PMF_JUMP_HELD)
+	//{
+	//	return false;
+	//}
 
 	// don't jump if we can't stand up
 	if (current.movementFlags & PMF_DUCKED)

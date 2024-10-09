@@ -2073,6 +2073,8 @@ void idGameLocal::InitFromNewMap(const char *mapName, idRenderWorld *renderWorld
 	// ddynerman: listen server
 	this->isListenServer = isServer && !cvarSystem->GetCVarBool("net_serverDedicated");
 	// RAVEN END
+
+
 	this->isMultiplayer = isServer || isClient;
 
 	// Xanz: removed so that multiplayer mods still work :)
