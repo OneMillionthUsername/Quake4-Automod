@@ -1,4 +1,5 @@
 @echo off
+@REM Starts the game. Typically used for singleplayer mods.
 set Q4ModName=automod
 set Q4InstallPath=C:\Program Files (x86)\Steam\steamapps\common\Quake 4
 set CWD=%cd%
