@@ -87,6 +87,12 @@ extern idCVar g_showFrameCmds;
 extern idCVar g_showGodDamage;
 // RAVEN END
 
+//e p i x BEGIN
+extern idCVar ui_autohop;
+extern idCVar ui_autoFireZoomedMG;
+//END
+
+
 // RAVEN BEGIN
 // twhitaker: debug cvars for rvVehicleDriver
 extern idCVar g_debugVehicleDriver;

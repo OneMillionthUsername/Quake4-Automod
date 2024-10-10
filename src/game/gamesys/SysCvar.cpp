@@ -124,6 +124,12 @@ idCVar ui_hitscanTint("ui_hitscanTint", "120.0 0.6 1.0", CVAR_GAME | CVAR_USERIN
 // RAVEN END
 idCVar ui_autoSwitch("ui_autoSwitch", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "auto switch weapon");
 idCVar ui_autoReload("ui_autoReload", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "auto reload weapon");
+
+//e p i x BEGIN
+idCVar ui_autohop("ui_autohop", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "");
+idCVar ui_autoFireZoomedMG("ui_autoFireZoomedMG", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "");
+//e p i x END
+
 idCVar ui_showGun("ui_showGun", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "show gun");
 idCVar ui_ready("ui_ready", si_readyArgs[0], CVAR_GAME | CVAR_USERINFO, "player is ready to start playing", idCmdSystem::ArgCompletion_String<si_readyArgs>);
 idCVar ui_spectate("ui_spectate", si_spectateArgs[0], CVAR_GAME | CVAR_USERINFO, "play or spectate", idCmdSystem::ArgCompletion_String<si_spectateArgs>);
@@ -141,10 +147,6 @@ idCVar g_forceMarineModel("g_forceMarineModel", "", CVAR_GAME | CVAR_ARCHIVE, "L
 idCVar g_fixedHorizFOV("r_fixedHorizFOV", "0", CVAR_RENDERER | CVAR_BOOL, "vertical stretch for letterboxed cinematics authored for 4:3 aspect");
 idCVar g_cinematic("g_cinematic", "1", CVAR_GAME | CVAR_BOOL, "skips updating entities that aren't marked 'cinematic' '1' during cinematics");
 idCVar g_cinematicMaxSkipTime("g_cinematicMaxSkipTime", "600", CVAR_GAME | CVAR_FLOAT, "# of seconds to allow game to run when skipping cinematic.  prevents lock-up when cinematic doesn't end.", 0, 3600);
-
-//e p i x
-idCVar g_autohop("g_autohop", "1", CVAR_GAME | CVAR_BOOL, "");
-idCVar g_autoFireZoomedMG("g_autoFireZoomedMG", "1", CVAR_GAME | CVAR_BOOL, "");
 
 idCVar g_muzzleFlash("g_muzzleFlash", "1", CVAR_GAME | CVAR_ARCHIVE | CVAR_BOOL, "show muzzle flashes");
 idCVar g_projectileLights("g_projectileLights", "1", CVAR_GAME | CVAR_ARCHIVE | CVAR_BOOL, "show dynamic lights on projectiles");

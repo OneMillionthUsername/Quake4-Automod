@@ -260,7 +260,10 @@ stateResult_t rvWeaponMachinegun::State_Fire(const stateParms_t &parms)
 			nextAttackTime = gameLocal.time + (altFireRate * owner->PowerUpModifier(PMOD_FIRERATE));
 			Attack(true, 1, spreadZoom, 0, 1.0f); 
 			//e p i x - make MG autofire while zoomed.
-			//fireHeld = true;
+			if (!ui_autoFireZoomedMG.GetBool())
+			{
+				fireHeld = true;
+			}
 		}
 		else
 		{
