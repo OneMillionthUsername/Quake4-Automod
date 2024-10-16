@@ -287,6 +287,9 @@ void Sys_DebugPrintf(const char *fmt, ...) id_attribute((format(printf, 1, 2)));
 void Sys_DebugVPrintf(const char *fmt, va_list arg);
 
 // a decent minimum sleep time to avoid going below the process scheduler speeds
+//e p i x BEGINN
+//Linux dedicated server drops a warning: Sys_Sleep - 10 < 20 msec is not portable
+//e p i x END
 #define SYS_MINSLEEP 20
 
 // allow game to yield CPU time

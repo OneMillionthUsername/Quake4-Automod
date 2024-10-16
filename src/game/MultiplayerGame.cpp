@@ -9491,7 +9491,7 @@ const char *idMultiplayerGame::announcerSoundDefs[AS_NUM_SOUNDS] = {
 	"announce_dm_you_tied_lead",	   // AS_DM_YOU_TIED_LEAD
 	"announce_dm_you_have_taken_lead", // AS_DM_YOU_HAVE_TAKEN_LEAD
 	"announce_dm_you_lost_lead",	   // AS_DM_YOU_LOST_LEAD
-									   // Team announcements
+	// Team announcements
 	"announce_team_enemy_score",	   // AS_TEAM_ENEMY_SCORES
 	"announce_team_you_score",		   // AS_TEAM_YOU_SCORE
 	"announce_team_teams_tied",		   // AS_TEAM_TEAMS_TIED

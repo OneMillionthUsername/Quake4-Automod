@@ -1676,6 +1676,11 @@ void idPlayer::Init(void)
 	weaponSwitchTime = 0;
 	weaponEnabled = true;
 	showWeaponViewModel = GetUserInfo()->GetBool("ui_showGun");
+	//e p i x BEGIN
+	//TODO
+	//userInfo->getbool("ui_autohop");
+	//userInfo->getbool("ui_autoFireZoomedMG");
+	//e p i x END
 	oldInventoryWeapons = 0;
 
 	lastDmgTime = 0;
@@ -2884,6 +2889,11 @@ void idPlayer::Restore(idRestoreGame *savefile)
 	// RAVEN BEGIN
 	// mekberg: Grab from user info.
 	showWeaponViewModel = GetUserInfo()->GetBool("ui_showGun");
+	//e p i x BEGIN
+	//TODO
+	//userInfo->getbool("ui_autohop");
+	//userInfo->getbool("ui_autoFireZoomedMG");
+	//e p i x END
 
 	// precache decls
 	declManager->FindType(DECL_ENTITYDEF, "damage_fatalfall", false, false);
@@ -3554,6 +3564,12 @@ bool idPlayer::UserInfoChanged(void)
 
 	userInfo = GetUserInfo();
 	showWeaponViewModel = userInfo->GetBool("ui_showGun");
+
+	//e p i x BEGIN
+	//TODO
+	//userInfo->GetBool("ui_autohop");
+	//userInfo->GetBool("ui_autoFireZoomedMG");
+	//e p i x END
 
 	if (!gameLocal.isMultiplayer)
 	{

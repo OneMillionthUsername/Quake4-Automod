@@ -1464,14 +1464,13 @@ bool idPhysics_Player::CheckJump(void)
 		return false;
 	}
 
-	//e p i x BEGIN
-	//turn off this wait condition for autohop 1
 	// must wait for jump to be released
+	//e p i x BEGIN
 	if ((current.movementFlags & PMF_JUMP_HELD) && !ui_autohop.GetBool())
 	{
 		return false;
 	}
-	//END
+	//e p i x END
 
 	// don't jump if we can't stand up
 	if (current.movementFlags & PMF_DUCKED)

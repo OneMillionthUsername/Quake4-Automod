@@ -90,7 +90,7 @@ extern idCVar g_showGodDamage;
 //e p i x BEGIN
 extern idCVar ui_autohop;
 extern idCVar ui_autoFireZoomedMG;
-//END
+//e p i x END
 
 
 // RAVEN BEGIN
