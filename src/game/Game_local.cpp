@@ -237,7 +237,8 @@ static sortInfo_t filterByMod = {
 	SC_ALL,
 	NULL,
 	FilterByMod,
-	"#str_123006"};
+	"#str_123006"
+	};
 
 /*
 ===========
@@ -609,7 +610,7 @@ void idGameLocal::Init(void)
 
 	networkSystem->AddSortFunction(filterByMod);
 	Printf("-------------------------------- \n");
-	Printf("Xanz SDK Version 1.4.4 Loaded! \n");
+	Printf("------- Automod Loaded! -------- \n");
 	Printf("-------------------------------- \n");
 }
 
