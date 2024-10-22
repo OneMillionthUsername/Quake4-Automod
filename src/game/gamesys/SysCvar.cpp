@@ -126,8 +126,8 @@ idCVar ui_autoSwitch("ui_autoSwitch", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCH
 idCVar ui_autoReload("ui_autoReload", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "auto reload weapon");
 
 //e p i x BEGIN
-idCVar ui_autohop("ui_autohop", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "");
-idCVar ui_autoFireZoomedMG("ui_autoFireZoomedMG", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "");
+idCVar ui_autohop("ui_autohop", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "auto jump when holding jump");
+idCVar ui_autoFireZoomedMG("ui_autoFireZoomedMG", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "auto fire when zooming with machinegun");
 //e p i x END
 
 idCVar ui_showGun("ui_showGun", "1", CVAR_GAME | CVAR_USERINFO | CVAR_ARCHIVE | CVAR_BOOL, "show gun");

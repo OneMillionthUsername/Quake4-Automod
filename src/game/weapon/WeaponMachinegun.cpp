@@ -261,7 +261,10 @@ stateResult_t rvWeaponMachinegun::State_Fire(const stateParms_t &parms)
 			Attack(true, 1, spreadZoom, 0, 1.0f); 
 			//e p i x BEGINN
 			//make MG autofire while zoomed.
-			if (!ui_autoFireZoomedMG.GetBool())
+			
+			//idPlayer* player = gameLocal.GetLocalPlayer();
+			//bool autofire = player->GetUserInfo()->GetBool("ui_autoFireZoomedMG");
+			if (!owner->GetUserInfo()->GetBool("ui_autoFireZoomedMG"))
 			//e p i x END
 			{
 				fireHeld = true;

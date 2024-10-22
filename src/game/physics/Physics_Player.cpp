@@ -1464,9 +1464,17 @@ bool idPhysics_Player::CheckJump(void)
 		return false;
 	}
 
-	// must wait for jump to be released
 	//e p i x BEGIN
-	if ((current.movementFlags & PMF_JUMP_HELD) && !ui_autohop.GetBool())
+	//we need the player for GetUserInfo()->GetBool(cVar)
+	bool autohop = false;
+	
+	if (gameLocal.IsMultiplayer())
+	{
+		autohop = gameLocal.GetUserInfo(self->entityNumber)->GetBool("ui_autohop");
+	}
+
+	// must wait for jump to be released
+	if ((current.movementFlags & PMF_JUMP_HELD) && !autohop)
 	{
 		return false;
 	}
