@@ -1457,11 +1457,6 @@ idPhysics_Player::CheckJump
 bool idPhysics_Player::CheckJump(void)
 {
 	idVec3 addVelocity;
-	//e p i x BEGINN
-	bool autohop = false;
-	idPlayer* player{};
-	rvClientEntity* ent{};
-	//e p i x END
 
 	if (command.upmove < 10)
 	{
@@ -1469,44 +1464,16 @@ bool idPhysics_Player::CheckJump(void)
 		return false;
 	}
 
-
 	//e p i x BEGIN
 	//we need the player for GetUserInfo()->GetBool(cVar)
+	bool autohop = false;
 	
-	if (self)
+	if (gameLocal.IsMultiplayer())
 	{
-		//for (int i = 0; i < MAX_CLIENTS; i++)
-		//{
-		//	//if game is client
-		//	//check if localclient == entityNum
-		//	ent = gameLocal.clientEntities[i];
-		//	if (ent->IsType(idPlayer::GetClassType()))
-		//	{
-		//		if (gameLocal.localClientNum == ent->entityNumber)
-		//		{
-		//			player = gameLocal.GetLocalPlayer();
-		//			break;
-		//		}
-		//	}
-		//}
 		autohop = gameLocal.GetUserInfo(self->entityNumber)->GetBool("ui_autohop");
 	}
 
-	//if (player)
-	//{
-	//	autohop = player->GetUserInfo()->GetBool("ui_autohop");
-	//}
-
-	//TODO
-	//check server cvar
-	//if server allows autohop -> let client decide
-	//else no autohop.
-		
-	//autohop = gameLocal.GetUserInfo(player->entityNumber)->GetBool("ui_autohop");
-	//else - what happens if the game is a dedicated server?
-
 	// must wait for jump to be released
-	//if ((current.movementFlags & PMF_JUMP_HELD) && !ui_autohop.GetBool())
 	if ((current.movementFlags & PMF_JUMP_HELD) && !autohop)
 	{
 		return false;
