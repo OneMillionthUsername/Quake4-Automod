@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+*.bat
 
 # Output folders
 /Builds
