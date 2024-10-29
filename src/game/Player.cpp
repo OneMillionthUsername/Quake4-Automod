@@ -3555,12 +3555,6 @@ bool idPlayer::UserInfoChanged(void)
 	userInfo = GetUserInfo();
 	showWeaponViewModel = userInfo->GetBool("ui_showGun");
 
-	//e p i x BEGIN
-	//TODO: maybe put it here?
-	//userInfo->GetBool("ui_autohop");
-	//userInfo->GetBool("ui_autoFireZoomedMG");
-	//e p i x END
-
 	if (!gameLocal.isMultiplayer)
 	{
 		return false;
@@ -8904,6 +8898,10 @@ void idPlayer::BobCycle(const idVec3 &pushVelocity)
 	// no view bob at all in MP while zoomed in
 	if (gameLocal.isMultiplayer && IsZoomed())
 	{
+		//e p i x BEGINN
+		//TODO
+		// add default zoom for every weapong
+		//e p i x END
 		bobCycle = 0;
 		bobFoot = 0;
 		bobfracsin = 0;
